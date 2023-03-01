@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 1000px;
+            margin: 20px auto;
+        }
+
+        .ck-editor__editable[role="textbox"] {
+            /* editing area */
+            min-height: 200px;
+            max-height: 300px;
+        }
+
+        .ck-content .image {
+            /* block images */
+            max-width: 80%;
+            margin: 20px auto;
+        }
+    </style>
+
+</head>
+
+<body ng-controller="demoCtrl">
+    <h1>AngularJS CKEditor Example</h1>
+    <div ck-editor ng-model="editorContent"></div>
+    <p>Editor içeriği:</p>
+    <div>{{ editorContent }}</div>
+
+
+    <!-- library -->
+    <script src="scr/library/angular.min.js"></script>
+    <script src="scr/library/dd.js"></script>
+    <script src="./scr/app.controller.js"></script>
+</body>
+
+
+</html>
